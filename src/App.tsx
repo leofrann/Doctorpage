@@ -36,7 +36,10 @@ export default function App() {
             />
           </div>
           <a 
-            href="#contato" 
+            href="https://wa.me/5511985792453?text=Ol%C3%A1%2C%20equipe%20Doctorpage!%20Quero%20transformar%20meu%20site%20em%20uma%20m%C3%A1quina%20de%20atrair%20pacientes%20pelo%20Google." 
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Falar com um especialista da Doctorpage"
             className="hidden md:flex items-center gap-2 text-sm font-medium text-white bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2.5 rounded-full transition-all"
           >
             Falar com especialista
@@ -44,8 +47,10 @@ export default function App() {
         </div>
       </nav>
 
-      {/* 1. HERO */}
-      <section className="relative pt-30 pb-20 md:pt-30 md:pb-32 px-6 overflow-hidden">
+      {/* MAIN CONTENT */}
+      <main>
+        {/* 1. HERO */}
+        <section className="relative pt-30 pb-20 md:pt-30 md:pb-32 px-6 overflow-hidden">
         {/* Glow Effects */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-400/10 blur-[120px] rounded-full pointer-events-none" />
@@ -91,7 +96,10 @@ export default function App() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <a 
-              href="#contato" 
+              href="https://wa.me/5511985792453?text=Ol%C3%A1%2C%20equipe%20Doctorpage!%20Quero%20transformar%20meu%20site%20em%20uma%20m%C3%A1quina%20de%20atrair%20pacientes%20pelo%20Google." 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Quero aparecer no Google com uma Landing Page otimizada"
               className="inline-flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-400 text-[#050B14] text-lg font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(57,232,210,0.4)] hover:shadow-[0_0_40px_rgba(57,232,210,0.6)] hover:-translate-y-1"
             >
               Quero aparecer no Google
@@ -142,7 +150,9 @@ export default function App() {
                 <div className={`aspect-[4/3] overflow-hidden flex items-center justify-center bg-slate-800/50 ${project.contain ? 'p-3' : ''}`}>
                   <img 
                     src={project.image} 
-                    alt={project.title} 
+                    alt={`Projeto de Landing Page para ${project.title}`} 
+                    title={`Projeto ${project.title} - Doctorpage`}
+                    loading="lazy"
                     className={`w-full h-full transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100 ${project.contain ? 'object-cover object-top rounded-xl' : 'object-cover'}`}
                     referrerPolicy="no-referrer"
                   />
@@ -388,7 +398,10 @@ export default function App() {
           </motion.h2>
           <motion.div {...fadeIn}>
             <a 
-              href="#contato" 
+              href="https://wa.me/5511985792453?text=Ol%C3%A1%2C%20equipe%20Doctorpage!%20Quero%20transformar%20meu%20site%20em%20uma%20m%C3%A1quina%20de%20atrair%20pacientes%20pelo%20Google." 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Quero começar agora a criar meu site médico"
               className="inline-flex items-center justify-center gap-2 bg-white text-[#050B14] text-lg font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.2)]"
             >
               Quero começar agora
@@ -420,7 +433,10 @@ export default function App() {
           </motion.h2>
           <motion.div {...fadeIn} className="flex flex-col items-center gap-4">
             <a 
-              href="#" 
+              href="https://wa.me/5511985792453?text=Ol%C3%A1%2C%20equipe%20Doctorpage!%20Quero%20transformar%20meu%20site%20em%20uma%20m%C3%A1quina%20de%20atrair%20pacientes%20pelo%20Google." 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Quero meu site - Falar com a equipe Doctorpage no WhatsApp"
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-blue-500 hover:bg-blue-400 text-[#050B14] text-xl font-bold px-10 py-5 rounded-full transition-all duration-300 shadow-[0_0_40px_rgba(57,232,210,0.5)] hover:shadow-[0_0_60px_rgba(57,232,210,0.7)] hover:-translate-y-1"
             >
               Quero meu site
@@ -433,6 +449,7 @@ export default function App() {
           </motion.div>
         </div>
       </section>
+      </main>
 
       {/* 12. RODAPÉ */}
       <footer className="py-12 px-6 border-t border-white/5 bg-[#03060A]">
@@ -451,7 +468,7 @@ export default function App() {
           </div>
           
           <div className="flex gap-6 text-sm text-slate-400">
-            <a href="#" className="hover:text-blue-400 transition-colors">Contato</a>
+            <a href="https://wa.me/5511985792453?text=Ol%C3%A1%2C%20equipe%20Doctorpage!%20Quero%20transformar%20meu%20site%20em%20uma%20m%C3%A1quina%20de%20atrair%20pacientes%20pelo%20Google." target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Contato</a>
             <a href="#" className="hover:text-blue-400 transition-colors">Termos</a>
             <a href="#" className="hover:text-blue-400 transition-colors">Privacidade</a>
           </div>
