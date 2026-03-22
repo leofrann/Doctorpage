@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Instagram } from 'lucide-react';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,15 +17,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
               referrerPolicy="no-referrer"
             />
           </Link>
-          <a 
-            href="https://wa.me/5511985792453?text=Ol%C3%A1%2C%20equipe%20Doctorpage!%20Quero%20transformar%20meu%20site%20em%20uma%20m%C3%A1quina%20de%20atrair%20pacientes%20pelo%20Google." 
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Falar com um especialista da Doctorpage"
-            className="hidden md:flex items-center gap-2 text-sm font-medium text-white bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2.5 rounded-full transition-all"
-          >
-            Falar com especialista
-          </a>
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://www.instagram.com/agenciadoctorpage/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da Doctorpage"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://wa.me/5511985792453?text=Ol%C3%A1%2C%20equipe%20Doctorpage!%20Quero%20transformar%20meu%20site%20em%20uma%20m%C3%A1quina%20de%20atrair%20pacientes%20pelo%20Google." 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Falar com um especialista da Doctorpage"
+              className="hidden md:flex items-center gap-2 text-sm font-medium text-white bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2.5 rounded-full transition-all"
+            >
+              Falar com especialista
+            </a>
+          </div>
         </div>
       </nav>
 
