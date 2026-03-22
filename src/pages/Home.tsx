@@ -10,7 +10,8 @@ import {
   Target, 
   Zap, 
   BarChart3, 
-  ShieldCheck 
+  ShieldCheck,
+  Star
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -390,6 +391,77 @@ export function Home() {
                 ))}
               </ul>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* AVALIAÇÕES (GOOGLE REVIEWS) */}
+      <section className="py-24 px-6 relative bg-[#050B14]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div {...fadeIn} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">O que dizem sobre nós</h2>
+            <p className="text-slate-400 flex items-center justify-center gap-2">
+              Avaliações reais de clientes que transformaram seus resultados.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Dr. Carlos Eduardo",
+                time: "2 semanas atrás",
+                text: "Excelente trabalho! Meu consultório passou a receber contatos diários pelo WhatsApp depois que a Doctorpage refez meu site e otimizou para o Google. Recomendo de olhos fechados.",
+                initial: "C",
+                color: "bg-blue-600"
+              },
+              {
+                name: "Clínica OdontoPrime",
+                time: "1 mês atrás",
+                text: "Estávamos gastando muito com anúncios sem retorno. A equipe da Doctorpage mudou nossa estratégia e agora aparecemos organicamente nas buscas da nossa região. O investimento se pagou no primeiro mês.",
+                initial: "O",
+                color: "bg-emerald-600"
+              },
+              {
+                name: "Dra. Juliana Martins",
+                time: "3 meses atrás",
+                text: "Profissionalismo do início ao fim. A página ficou linda, super rápida e realmente focada em conversão. Meus pacientes sempre elogiam a facilidade de agendar a consulta pelo site.",
+                initial: "J",
+                color: "bg-purple-600"
+              }
+            ].map((review, i) => (
+              <motion.div 
+                key={i}
+                {...fadeIn}
+                transition={{ delay: i * 0.1 }}
+                className="p-6 rounded-2xl bg-slate-900/80 border border-white/5 hover:border-white/10 transition-colors relative flex flex-col"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-full ${review.color} flex items-center justify-center text-white font-bold text-lg`}>
+                      {review.initial}
+                    </div>
+                    <div>
+                      <h3 className="text-white font-medium text-sm">{review.name}</h3>
+                      <p className="text-slate-400 text-xs">{review.time}</p>
+                    </div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+                    <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                    <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                    <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                    <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+                  </svg>
+                </div>
+                <div className="flex gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-[#FBBC04] text-[#FBBC04]" />
+                  ))}
+                </div>
+                <p className="text-slate-300 text-sm leading-relaxed flex-1">
+                  "{review.text}"
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
