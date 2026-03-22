@@ -31,6 +31,8 @@ export default function App() {
             <img 
               src="https://drive.google.com/thumbnail?id=1eLwo8m3hS28Ws0wuolDwCgxEUjnjKoj9&sz=w800" 
               alt="Doctorpage" 
+              width="200"
+              height="40"
               className="h-8 md:h-10 w-auto object-contain"
               referrerPolicy="no-referrer"
             />
@@ -153,6 +155,8 @@ export default function App() {
                     alt={`Projeto de Landing Page para ${project.title}`} 
                     title={`Projeto ${project.title} - Doctorpage`}
                     loading="lazy"
+                    width="800"
+                    height="600"
                     className={`w-full h-full transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100 ${project.contain ? 'object-cover object-top rounded-xl' : 'object-cover'}`}
                     referrerPolicy="no-referrer"
                   />
@@ -458,12 +462,15 @@ export default function App() {
             <img 
               src="https://drive.google.com/thumbnail?id=1eLwo8m3hS28Ws0wuolDwCgxEUjnjKoj9&sz=w800" 
               alt="Doctorpage" 
+              width="200"
+              height="40"
+              loading="lazy"
               className="h-8 w-auto object-contain"
               referrerPolicy="no-referrer"
             />
           </div>
           
-          <div className="text-slate-500 text-sm">
+          <div className="text-slate-400 text-sm">
             © {new Date().getFullYear()} Doctorpage. Todos os direitos reservados.
           </div>
           
